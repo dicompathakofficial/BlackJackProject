@@ -53,11 +53,13 @@ while game_on:
     lost = "PLAYER LOST"
     tied = "GAME TIED"
 
+    # CHECK FOR BLACKJACK
     if "Ace" in player_cards:
         if points(player_cards) + 10 == 21:
             print("Player Wins, BLACKJACK!!")
             break
 
+    # IF BLACKJACK DIDN'T HAPPEN
     user_input = input("Hit or pass")
     if user_input == " H":
         player_cards.append(cards[random.randint(0, 12)])
@@ -67,6 +69,7 @@ while game_on:
             print_cards("Dealer: ", dealer_cards)
             break
 
+    # CHECK IF DEALER'S CARDS TOTAL TO LESS THAN 17
     if points(dealer_cards) < 17:
         dealer_cards.append(cards[random.randint(1, 10)])
         if points(dealer_cards) > 21 or points(player_cards) > points(dealer_cards):
@@ -85,6 +88,7 @@ while game_on:
             print_cards("Dealer: ", dealer_cards)
             break
 
+    # IF DEALER'S CARDS ARE NOT LESS THAN 17
     if points(player_cards) > points(dealer_cards):
         print(win)
         print_cards("Player: ", player_cards)
@@ -104,3 +108,5 @@ while game_on:
 
 
     game_on = False
+
+# GAME DONE
