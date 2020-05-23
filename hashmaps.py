@@ -74,4 +74,4 @@ class HashMap:
 
             collision_counts += 1
 
-        return  # Same as the function in self.assign()
+        return  # Same as the assign function
