@@ -58,7 +58,7 @@ else:
         # to check if the total points of his cards is more than 21
         if points(player_cards) > 21:
             print("PLAYER LOST")
-            print(player_cards)
+            view_cards(player_cards, dealer_cards)
             break
         enter_input = input("Do you want to Hit or Pass(y/n):")
 
