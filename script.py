@@ -84,5 +84,5 @@ else:
         else:
             print("PLAYER LOST")
             view_cards(player_cards, dealer_cards)
-
-print("GAME COMPLETE")
+            
+# GMAE COMPLETE
